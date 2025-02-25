@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{.post.Title}} - 我的博客</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif;
+            line-height: 1.5715;
+            margin: 0;
+            padding: 24px;
+            background-color: #f0f2f5;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: #fff;
+            border-radius: 2px;
+            padding: 32px;
+            box-shadow: 0 1px 2px rgba(0,0,0,0.03);
+        }
+        .blog-title {
+            color: #262626;
+            font-size: 28px;
+            font-weight: 500;
+            margin-bottom: 24px;
+            text-align: center;
+        }
+        .blog-content {
+            color: #595959;
+            font-size: 15px;
+            line-height: 1.8;
+            white-space: pre-wrap;
+            margin-bottom: 32px;
+        }
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            color: #1890ff;
+            text-decoration: none;
+            font-size: 14px;
+            transition: color 0.3s;
+        }
+        .back-link:hover {
+            color: #40a9ff;
+        }
+        .back-link::before {
+            content: '←';
+            margin-right: 4px;
+            transition: transform 0.3s;
+        }
+        .back-link:hover::before {
+            transform: translateX(-3px);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="blog-title">{{.post.Title}}</h1>
+        <div class="blog-content">{{.post.Content}}</div>
+        <a href="/" class="back-link">← 返回首页</a>
+    </div>
+</body>
+</html>
